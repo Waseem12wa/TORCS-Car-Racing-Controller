@@ -44,16 +44,6 @@ The client is built in **Python** and uses a telemetry model to receive sensor d
 ### Download TORCS:
 Follow the installation instructions on the official TORCS site.
 
-### Configure TORCS server:
-Follow the instructions in the TORCS documentation to configure the src_server file.
-
-├── README.md                # Project documentation
-├── requirements.txt         # Python dependencies
-├── telemetry_client.py      # The Python client to control the car
-├── telemetry.py             # Telemetry data processing
-├── controller.py            # Logic for car control
-└── utils.py                 # Helper functions and utilities
-
 
 ### Telemetry Implementation
 The telemetry system in this project handles the data sent from the TORCS server. The sensors in the game provide data on various aspects like:
