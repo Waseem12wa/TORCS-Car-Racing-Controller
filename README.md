@@ -55,3 +55,37 @@ Follow the instructions in the TORCS documentation to configure the src_server f
 └── utils.py                 # Helper functions and utilities
 
 
+### Telemetry Implementation
+The telemetry system in this project handles the data sent from the TORCS server. The sensors in the game provide data on various aspects like:
+
+Track position (e.g., distance to track limits)
+Car state (e.g., fuel level, engine RPM)
+Game state (e.g., lap time, number of laps)
+
+The Python client receives this data, processes it, and makes decisions on how to steer, accelerate, or brake based on predefined strategies.
+
+## Sensor Data Example
+
+{
+    'track_position': 0.3,
+    'speed': 120,
+    'fuel': 100,
+    'lap_time': 15.5,
+    'engine_rpm': 3500,
+    'current_gear': 3
+}
+
+
+### Training Methodology
+For the car controller, we have implemented a machine learning-based approach using reinforcement learning techniques. The model was trained using telemetry data to learn the best actions (steer, accelerate, brake) to take under different circumstances on various tracks. The training process was based on the following key aspects:
+
+## Speed: Maximizing speed while maintaining control.
+
+Obstacle avoidance: Ensuring the car avoids collisions with other cars and obstacles on the track.
+Track following: Keeping the car within track boundaries to avoid penalties.
+The model uses deep learning techniques (e.g., neural networks) to map telemetry data to the correct control actions.
+
+
+
+
+
